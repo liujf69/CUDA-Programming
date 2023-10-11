@@ -28,7 +28,15 @@
     驱动API是一种低级API，较难用于编程; 运行时API是一种高级API，其在驱动API的基础上实现;
     驱动API和运行时API没有明显的性能差异，并且两者互相排斥，不能同时使用，一般编程中使用运行时API。
 
-# 代码执行结果
+# 代码示例
+## 编译运行
+    nvcc -arch sm_20 hello.cu -o hello
+    or
+    mkdir build && cd build
+    cmake ..
+    make
+    ./main
+## 代码结果
 <div align=center>
-<img src="/home/liujinfu/Desktop/CUDA/异构计算的基本概念/Hello.png"/>
+<img src="https://github.com/liujf69/CUDA-Programming/blob/main/%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Hello.png"/>
 </div>
