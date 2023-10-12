@@ -94,9 +94,9 @@ make
 ```
 ## 执行结果
 <div align=center>
-<img src="https://github.com/liujf69/CUDA-Programming/blob/main/%E6%A0%B8%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/checkDimension.png"/>
+<img src="./checkDimension.png" width="700">
 </div>
 <div align=center>
-<img src="https://github.com/liujf69/CUDA-Programming/blob/main/%E6%A0%B8%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/sumArraysOnGPU-timer.png"/>
+<img src="./sumArraysOnGPU-timer.png" width="700">
 </div>
 
