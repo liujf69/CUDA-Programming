@@ -1,1 +1,2 @@
-*.h linguist-language=Cuda
+*.C linguist-language=CUDA
+*.h linguist-language=CUDA
