@@ -38,5 +38,5 @@
     ./main
 ## 代码结果
 <div align=center>
-<img src="https://github.com/liujf69/CUDA-Programming/blob/main/%E5%BC%82%E6%9E%84%E8%AE%A1%E7%AE%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Hello.png"/>
+<img src="./Hello.png" width="700">
 </div>
