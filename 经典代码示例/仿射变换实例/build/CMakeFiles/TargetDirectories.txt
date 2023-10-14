@@ -1,0 +1,3 @@
+/home/liujinfu/Desktop/仿射变换实例/build/CMakeFiles/rebuild_cache.dir
+/home/liujinfu/Desktop/仿射变换实例/build/CMakeFiles/edit_cache.dir
+/home/liujinfu/Desktop/仿射变换实例/build/CMakeFiles/test.dir
