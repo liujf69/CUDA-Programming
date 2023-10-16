@@ -6,25 +6,25 @@ $$scale = min(\frac{dst_h}{src_h}, \frac{dst_w}{src_w})$$
 # 2--仿射变换矩阵
 $$
 \left[
-    \begin{matrix}
-        dst_x \\
-        dst_y
-    \end{matrix}
+\begin{matrix}
+dst_x \\
+dst_y
+\end{matrix}
 \right] 
 =
 \left[
-    \begin{matrix}
-        scale & 0 & \frac{-scale*src_w}{2} + \frac{dst_w}{2} + scale*0.5 - 0.5 \\
-        0 & scale & \frac{-scale * src_h}{2} + \frac{dst_h}{2} + scale*0.5 - 0.5
-    \end{matrix}
+\begin{matrix}
+scale & 0 & \frac{-scale*src_w}{2} + \frac{dst_w}{2} + scale*0.5 - 0.5 \\
+0 & scale & \frac{-scale * src_h}{2} + \frac{dst_h}{2} + scale*0.5 - 0.5
+\end{matrix}
 \right]
 *
 \left[
-    \begin{matrix}
-    src_x \\ 
-    src_y \\
-    1
-    \end{matrix}
+\begin{matrix}
+src_x \\ 
+src_y \\
+1
+\end{matrix}
 \right]  
 $$
 其中(src_x, src_y)表示变换前源图像的坐标，(dst_x, dst_y)表示变换后目标图像的坐标。
