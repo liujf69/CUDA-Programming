@@ -1,8 +1,10 @@
 # 仿射变换
 本笔记基于YoloV5前处理中使用的仿射变换算法，完成步骤如下:
+
 # 1--缩放因子
 $$scale = min(\frac{dst_h}{src_h}, \frac{dst_w}{src_w})$$ 
 其中$dst_h$和$dst_w$表示变换后目标图像的高和宽，$src_h$和$src_w$表示变换前源图像的高和宽
+
 # 2--仿射变换矩阵
 $$
 \left[
@@ -28,24 +30,25 @@ src_y \\
 \right]  
 $$
 其中(src_x, src_y)表示变换前源图像的坐标，(dst_x, dst_y)表示变换后目标图像的坐标。
+
 # 3--逆仿射变换矩阵
 ```C++
 // 可以通过opencv提供的API计算计算
 cv::invertAffineTransform(transform_M, Inverse_transform_M);
 ```
+
 # 4--坐标对应
 根据逆变换矩阵，可以求解目标图像的坐标对应在源图像中的坐标。
+
 # 5--双线性插值
-基于双线性插值，对于源图像中的一点($(src_x, src_y)$)，利用其四周的四个点v1, v2, v3, v4来计算三通道的值。
-$$
-c0 = w1*v1[0] + w2*v2[0] + w3*v3[0] + w4*v4[0] \\
-c1 = w1*v1[1] + w2*v2[1] + w3*v3[1] + w4*v4[1] \\
-c2 = w1*v1[2] + w2*v2[2] + w3*v3[2] + w4*v4[2] \\
-$$
+基于双线性插值，对于源图像中的一点($(src_x, src_y)$)，利用其四周的四个点v1, v2, v3, v4来计算三通道的值。</br>
+$$c0 = w1\*v1[0] + w2\*v2[0] + w3\*v3[0] + w4\*v4[0] </br>
+c1 = w1\*v1[1] + w2\*v2[1] + w3\*v3[1] + w4\*v4[1] </br>
+c2 = w1\*v1[2] + w2\*v2[2] + w3\*v3[2] + w4\*v4[2]$$
 
-<img src ="./WrapTransform.png" width="800">
+<img src ="./WrapTransform.png" width="800"/>
 
-# 5--代码展示
+# 6--代码展示
 ## 主函数
 ```C++
 #include "warpaffine.h"
