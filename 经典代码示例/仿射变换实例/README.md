@@ -6,7 +6,9 @@ $$scale = min(\frac{dst_h}{src_h}, \frac{dst_w}{src_w})$$
 其中 $dst_h$ 和 $dst_w$ 表示变换后目标图像的高和宽， $src_h$ 和 $src_w$ 表示变换前源图像的高和宽
 
 # 2--仿射变换矩阵
-<img src ="./TransformMatrix.png" width="800"/>
+<div align=center>
+<img src ="./Matrix.png" width="800"/>
+</div>
 其中(src_x, src_y)表示变换前源图像的坐标，(dst_x, dst_y)表示变换后目标图像的坐标。
 
 # 3--逆仿射变换矩阵
@@ -23,8 +25,9 @@ cv::invertAffineTransform(transform_M, Inverse_transform_M);
 $$c0 = w1\*v1[0]+w2\*v2[0]+w3\*v3[0] + w4\*v4[0]$$
 $$c1 = w1\*v1[1] + w2\*v2[1] + w3\*v3[1] + w4\*v4[1]$$
 $$c2 = w1\*v1[2] + w2\*v2[2] + w3\*v3[2] + w4\*v4[2]$$
-
+<div align=center>
 <img src ="./WrapTransform.png" width="800"/>
+</div>
 
 # 6--代码展示
 ## 主函数
